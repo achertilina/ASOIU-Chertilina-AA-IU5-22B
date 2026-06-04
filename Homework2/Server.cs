@@ -1,10 +1,20 @@
-namespace Homework2;
+namespace FinalHomework2;
 
-class Server
+/// <summary>
+/// Сервер (справочная таблица, сторона «один»)
+/// </summary>
+public class Server
 {
     public int Id { get; set; }
-    public string Name { get; set; }
-    public Server(int id, string name) { Id = id; Name = name; }
-    public Server() : this(0, "") { }
+    public string Name { get; set; } = "";
+
+    public Server() { }
+
+    public Server(int id, string name)
+    {
+        Id = id;
+        Name = name;
+    }
+
     public override string ToString() => $"[{Id}] {Name}";
 }
